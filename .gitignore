@@ -1,0 +1,5 @@
+data/raw
+data/processed
+model/submissions_v2.csv
+model/submissions.csv
+env

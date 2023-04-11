@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/* Variables */
+:root {
+  --main_width: 800px; 
+  --main_height: 720px; 
+  --font_color:white;
+  --roboto_font:'Roboto',Helvetica, sans-serif;
+  --helvetica_font:Helvetica, sans-serif;
+  --margin-top:30px;
+  --red_:#cc071e;
+  --white_:#ffffff;
+  --grey_:#a0a0a0;
+  --dark_:#363436;
+
+}
+
+* {
+    /* box-sizing:border-box; */
+    border-color: whitesmoke;
+    font-family: Helvetica, sans-serif;
+    color:  var(--dark_);;
+}
+
+
+/** --------------------------------------------------------------------------- */
+/** Header */
+/** --------------------------------------------------------------------------- */
+
+#rec_tab {background-color:red;}
+#pred_tab {background-color:green;}
+
+.logo {
+    margin: 1% 0% 0% 0%;
+    padding: 0%;
+    text-align: center;
+    background: var(--white_);
+    color: var(--red_);
+    font-size: 60px;
+    line-height: 0.8;
+  }
+  .logo img{
+    height: 15%;
+    width: 15%;
+  }
+.sub_logo {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    color: var(--grey_);
+    text-align: center;  
+    font-size: 16px; 
+    letter-spacing: 3px;
+}
+
+/** --------------------------------------------------------------------------- */
+/** Body */
+/** --------------------------------------------------------------------------- */
+body {
+  width: var(--main_width);
+  height: var(--main_height);
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+}
+.intro{
+  text-align: center;
+}
+.intro h6{
+  margin: 0%;
+}
+.intro p{
+  color: var(--grey_);
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding: 0% 15% 0% 15%;
+}
+.intro a{
+  color: var(--red_);
+}
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0% 0% 0%;
+}
+
+.dropdown {
+  padding-top: 0%;
+  padding-left: 0%;
+}
+
+.dropdown select{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: var(--grey_);
+  font-size: 18px;
+}
+.dropdown button{
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #cc071e;
+  border-radius: 10px;
+}
+.cus_profile{
+  padding-top: 0%;
+  padding-right: 0%;
+  text-align: right;
+}
+.cus_name {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.mod_name {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+/** --------------------------------------------------------------------------- */
+/** Recent Purchase Box */
+/** --------------------------------------------------------------------------- */
+.last_box {
+  width: var(--main_width);
+  height: auto;
+  display: block;
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: var(--grey_); */
+  /* text-align: center; */
+}
+
+.last_box p {
+  margin: 0%;
+  font-size: 18px;
+}
+
+.last_box img {
+  /* opacity: 0.6; */
+  width: 76px;
+  height: 115px;
+  padding: 10px;
+  background-color: transparent;
+}
+.last_items {
+  margin: auto;
+  width: 80%;
+}
+/** --------------------------------------------------------------------------- */
+/** Recommend Box */
+/** --------------------------------------------------------------------------- */
+.rec_box {
+  width: var(--main_width);
+  height: auto;
+  display: block;
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: var(--grey_); */
+}
+.rec_box p {
+  margin: 0%;
+  font-size: 18px;
+}
+.rec_items {
+  margin: auto;
+  width: 80%;
+}
+.rec_items img {
+  width: 76px;
+  height: 115px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+
+/** --------------------------------------------------------------------------- */
+/** Actual Box */
+/** --------------------------------------------------------------------------- */
+.actual_box {
+  width: var(--main_width);
+  height: auto;
+  display: block;
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: var(--grey_); */
+}
+.actual_box p {
+  margin: 0%;
+  font-size: 18px;
+}
+.actual_items {
+  margin: auto;
+  width: 80%;
+}
+.actual_items img {
+  width: 76px;
+  height: 115px;
+  padding: 10px;
+  background-color: transparent;
+}

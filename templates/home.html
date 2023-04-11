@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Recommender Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/home.css">
+    </head>
+    <!--! Header -->
+    <header>
+        <p class="logo">
+            <img src="static/images/hm-logo-1.png" alt="logo">
+        </p>
+        <p class="sub_logo">Recommender</p>
+    </header>
+    <body>
+    <!--! Body 0: Intro--> 
+    <div class="intro">
+        <h6>ABOUT</h6>
+        <p>H&M Group invites everyone to develop product recommendations based on data from previous transactions, as well as from customer and product meta data. For reference, please visits <a href="https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/overview">kaggle.com</a></p>
+    </div>
+
+    <!--! Body 1: Input Customer & Model-->
+    <div class="input">
+        <form action="{{ url_for('home')}}"  class="dropdown" id="name_input" method="POST">
+            <!-- <span class="input">Input:</span><br> -->
+            <select name="customers" id="customer">
+                <!-- <option value={{id}}>{{cus_name}}</option> -->
+                {% for name in name_list%}
+                <option value={{nameDict[name]}}>{{name}}</option>
+                {% endfor %}
+            </select>
+            <select id="model_selector" name="model_types">
+                {% for mod in model_list %}
+                <option value="{{mod}}">{{mod}}</option>
+                {% endfor %}
+            </select>
+            
+            <button type="submit" class="btn btn-default" id="submit">Submit</button>
+        </form><br>
+
+        <div class="cus_profile">
+            <span class="cus_name">{{cus_name}}</span>
+            <br><span class="mod_name">{{model}}</span>
+        </div>
+    </div>
+    <!--! Body 2: Recent Purchase Items -->
+
+    <div class="last_box">
+        <p>RECENT PURCHASE:</p>
+        <div class="last_items">
+        {% for item in last_items[:max_recent] %}
+        <!-- <button class="last_item"> -->
+        <img src="static/images/{{item}}.jpg" alt="{{articles[item]}}">
+        <!-- </button> -->
+        {% endfor %}
+        </div>
+    </div>   
+    <!--! Body 3: Recommended Items-->
+    
+    <div class="rec_box">
+    <p>RECOMMEND ITEMS:</p>
+        <div class="rec_items">
+            {% for item in rec_items[:6] %}
+            <!-- <button class="item" id="item_1" > -->
+            <img src="static/images/{{item}}.jpg" alt="{{articles[item]}}">
+            <!-- </button> -->
+            {% endfor %}
+        </div>
+        <div class="rec_items">
+            {% for item in rec_items[6:] %}
+            <!-- <button class="item" id="item_1" > -->
+            <img src="static/images/{{item}}.jpg" alt="{{articles[item]}}">
+            <!-- </button> -->
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!--! Body 4 -->
+
+    <div class="actual_box">
+    <p>ACTUAL ITEMS:</p>
+        <div class="actual_items">
+            {% for item in actual_items[:6] %}
+            <img src="static/images/{{item}}.jpg" alt="{{articles[item]}}">
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+    </body>
+</html>
